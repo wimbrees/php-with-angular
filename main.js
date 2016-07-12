@@ -4,6 +4,9 @@ import ngResource from 'angular-resource';
 angular.module('movies', ['ngResource'])
 
     .controller('moviesController', function($http, $resource) {
+      
+        // Solves errors when minifying JS with webpack -p
+        "ngInject";
 
         // jQuery uses x-www-form-urlencoded, Angular application/json
         // $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
